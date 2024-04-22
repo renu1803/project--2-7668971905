@@ -1,0 +1,17 @@
+// 766897190501
+Pointer is a variable in C-programming that hold the address of another variable or function.In C programming , it is a powerful feature that adds the enormous power and flexibility.
+It declared as : [storage_class_specifier][type_qualifier][type_modifier]type_specifier*identifier.
+Square bracket terms are optional, they might not be present in declaration but the remaining one are mandatory part of a pointer declaration.Pointer variable declarations are read from the right side like 
+int * ptr read as ptr is pointer to an integer.
+
+Pointer is different from the variable it hold address of the another variable. As normal variable have different amount of memory space according to their type but in case of pointer ,every pointer variable
+occupied same memory spac ein c programming whether it is pointer to int ,float,char,etc.
+
+#include<stdio.h>
+int main()
+{
+  int x;
+  int*ptr=&x;
+  printf("Address of x : %p",ptr);
+  return 0;
+}
