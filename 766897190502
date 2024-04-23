@@ -1,0 +1,5 @@
+// 766897190502
+The 'const' keywords is used to define constant in C-programming .It indicate the value of the variable cannot be change throughout the whole program after initialization it's value.
+If we use 'const' with the variable decalaration ,it means we ensure that the value of that variable remains constant or doesn't change in the whole program.We can't be modify the value if try to that 
+then we face compilier error in the program.
+When we talk about 'const' keyword in function parameter it means we prevent the parameter modification throughout the function.we fixed it value in function and doesn't change or alter it's value.
