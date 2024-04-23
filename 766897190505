@@ -1,0 +1,26 @@
+// 766897190505gsk20io
+Recursion is the process which comes into existence when a function calls a copy of itself to work on a smaller problem.Any function which calls itself is called recursive function,and such calls are called 
+recursive calls .Recursive or recursion involves severval number of the recursive calls.It is important to impose a termination condition of recursion.
+
+Recursion is a powerful programming technique that can be used to solve the problems that can be 
+expressed in terms of similar problems of smaller size.
+
+#include<stdio.h>
+int fact(int n)
+{
+  if(n<=1){
+  return 1;
+}
+  else{
+  return n*fact(n-1);
+}
+int main() 
+{
+  int n,fac;
+  printf("Enter the number for factorial: ");
+  scanf("%d",&n);
+  fac=fact(n);
+  printf("Factorial is %d",fac);
+  return 0;
+}
+  
