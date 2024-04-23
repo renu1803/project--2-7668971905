@@ -1,0 +1,12 @@
+// 766897190504
+In C-programming , 'typedef' keywords as we read the name of keyword their is two terms type and def which directily indicate that we do something with the data type of C.When we want to change the name of 
+the already present datatype then we use this keyword .It help to make more easier to read the code .
+Here is an dempstration of an example which help you to clearify the term 'typedef':
+#include<stdio.h>
+typedef int heyint ;
+int main()
+{
+  heyint x=7;
+  printf("Value of x is: %d",x);
+  return 0;
+}
