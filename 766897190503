@@ -1,0 +1,7 @@
+// 766897190503
+strcpy() : 
+This funcction help to copy the entire source string to the destination string until it encounters a null terminator ('\0').But it doesn't provide a way to specify the number of characters 
+to copy from source string to the destination buffer. Sometimes we face overflow if the souce string is very long as compare to the destination buffer .
+strncpy() :
+This function is same as strcpy() but in this function we have to taken maximum 'n' number of character of string from source string to the destination .In this ,it is not neccessary null termination in all,
+may be the n is less than or equal to the length of source string. It doesn't terminate the destination string automatically.But here we specify the limit to copy the string.
