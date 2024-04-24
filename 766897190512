@@ -1,0 +1,6 @@
+// 766897190512 gsk12E01
+(A) x=20,y=10
+(B) *
+(C) 1 2 3 4 5
+(D) 120
+(E) ini*ptr(int); (According to me their is a correction , answer is void<functionname>(int*ptr))
