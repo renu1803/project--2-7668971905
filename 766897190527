@@ -1,0 +1,21 @@
+// 766897190527
+Recursion in C programming refers to the process where a function call itself directly or indirectly. It is a powerful concept that simplified the complex problem by breaking them down into smaller ,
+similar subproblems.This concept reduce the rewriting of multiple time same process by calling itself . 
+#include<stdio.h>
+int fact(int n)
+{
+  //  a function for a factorial through recursion 
+  if(n<=1)
+    return 1;
+  else
+    return n*fact(n-1);
+}
+int main() 
+{
+  int n , fac;
+  printf("Enter the value for factorial : ");
+  scanf("%d",&n); // taking input from user for factorial 
+  fac=fact(n);
+  printf("Factorial of %d is : %d",n,fac);
+  return 0;
+}
