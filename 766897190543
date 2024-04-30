@@ -1,0 +1,33 @@
+// 766897190543block2501
+#include <stdio.h>
+#include <stdlib.h>
+
+int avg(int arr[100][100], int m, int n) 
+{    int sum=0;
+     int size=m*n;
+     int average;
+    for(int i = 0; i < m; i++) {
+        for(int j = 0; j < n; j++) {
+           int a = arr[i][j];
+           sum += a;
+           average=sum/size ;
+        }
+    }   
+    return average ;
+}
+int main() 
+{
+    int m, n, p, q;
+    int arr[100][100];
+    printf("Enter the number of rows and columns of first matrix: ");
+    scanf("%d%d", &m, &n);
+    printf("Enter the elements of matrix:\n");
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+    printf("Average of matrix is : ");
+    printf("%d",avg(arr, m, n)); ;
+    return 0;
+}
