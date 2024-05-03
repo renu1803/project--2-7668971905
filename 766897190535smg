@@ -1,0 +1,71 @@
+// 766897190535smg
+#include <stdio.h>
+// Function to merge two sorted arrays into a third sorted array
+void mergeSortedArrays(int arr1[], int n1, int arr2[], int n2, int merged_array[]) 
+{
+    int i = 0, j = 0, k = 0;
+    while (i < n1 && j < n2) 
+    {
+        if (arr1[i] < arr2[j]) 
+        {
+            merged_array[k++] = arr1[i++];
+        }
+        else 
+        {
+            merged_array[k++] = arr2[j++];
+        }
+    }
+    while (i < n1) 
+    { // Add elements from arr1
+        merged_array[k++] = arr1[i++];
+    }
+    while (j < n2) 
+    {  // Add elements from arr2
+        merged_array[k++] = arr2[j++];
+    }
+}
+// Function to sort the array.
+void Sort(int arr[], int size) 
+{
+    for (int i = 0; i < size - 1; i++) 
+    {
+        for (int j = 0; j < size - i - 1; j++) 
+        {
+            if (arr[j] > arr[j + 1]) 
+            {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+int main() 
+{
+    int n, m;
+    printf("Enter the size of array1 and array2: ");
+    scanf("%d%d", &n, &m);
+    int arr1[n];
+    int arr2[m];
+    printf("Enter the elements of array1: ");
+    for (int i = 0; i < n; i++) 
+    {
+        scanf("%d", &arr1[i]);
+    }
+    printf("Enter the elements of array2: ");
+    for (int i = 0; i < m; i++) 
+    {
+        scanf("%d", &arr2[i]);
+    }
+    Sort(arr1, n);
+    Sort(arr2, m);
+    int merged_size = n + m;
+    int merged[merged_size];
+    mergeSortedArrays(arr1, n, arr2, m, merged);
+    printf("Merged Array: ");
+    for (int i = 0; i < merged_size; i++) 
+    {
+        printf("%d ", merged[i]);
+    }
+    return 0;
+}
