@@ -1,0 +1,56 @@
+// 766897190541smg
+#include <stdio.h>
+// This program only transpose 1 row ....so somya ji please try to understand
+void transpose(int *arr, int m, int n) 
+{
+    int temp;
+    for (int i = 0; i < m; i++) 
+    {
+        for (int j = i + 1; j < n; j++) 
+        {
+            // Swapping element at (i, j) with element at (j, i)
+            temp = *((arr + i * n) + j);
+            *((arr + i * n) + j) = *((arr + j * n) + i);
+            *((arr + j * n) + i) = temp;
+        }
+    }
+}
+void printarr(int *arr, int m, int n) 
+{
+    printf("Transposed Matrix:\n");
+    for (int i = 0; i < n; i++) 
+    {
+        for (int j = 0; j < m; j++) 
+        {
+            printf("%d ", *((arr + i * m) + j));
+        }
+        printf("\n");
+    }
+}
+int main() 
+{
+    int arr[100][100];
+    int m, n;
+    printf("Enter the rows and columns: ");
+    scanf("%d%d", &m, &n);
+    printf("Enter the elements:\n");
+    for (int i = 0; i < m; i++) 
+    {
+        for (int j = 0; j < n; j++) 
+        {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+    printf("Original Matrix:\n");
+    for (int i = 0; i < m; i++) 
+    {
+        for (int j = 0; j < n; j++) 
+        {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+    transpose(&arr[0][0], m, n);
+    printarr(&arr[0][0], n, m);
+    return 0;
+}
