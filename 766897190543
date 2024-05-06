@@ -1,4 +1,4 @@
-// 766897190543block2501
+// 766897190543block2501202fgtb
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -11,7 +11,7 @@ int avg(int arr[100][100], int m, int n)
            int a = arr[i][j];
            sum += a;
            average=sum/size ;
-        }
+}
     }   
     return average ;
 }
